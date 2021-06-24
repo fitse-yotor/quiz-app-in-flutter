@@ -9,7 +9,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          //SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           SafeArea(
               child: Column(
             children: [
@@ -19,7 +19,8 @@ class WelcomeScreen extends StatelessWidget {
                     .textTheme
                     .headline4
                     .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-              )
+              ),
+              Text("Enter your information Below")
             ],
           ))
         ],
