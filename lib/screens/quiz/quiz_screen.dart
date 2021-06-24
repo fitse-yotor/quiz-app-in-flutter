@@ -83,7 +83,8 @@ class _progress extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("${(controller.animation.value * 60.round())} Sec"),
+                      Text(
+                          "${((controller.animation.value * 60).round())} Sec"),
                       SvgPicture.asset(
                         "assets/icons/clock.svg",
                       ),
