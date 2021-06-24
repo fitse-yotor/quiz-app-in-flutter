@@ -11,17 +11,21 @@ class WelcomeScreen extends StatelessWidget {
         children: [
           SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           SafeArea(
-              child: Column(
-            children: [
-              Text(
-                "Let's Play Quiz",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline4
-                    .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
-              Text("Enter your information Below")
-            ],
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Spacer(),
+                Text(
+                  "Let's Play Quiz",
+                  style: Theme.of(context).textTheme.headline4.copyWith(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                Text("Enter your information Below"),
+                Spacer()
+              ],
+            ),
           ))
         ],
       ),
