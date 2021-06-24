@@ -15,11 +15,39 @@ class QuizScreen extends StatelessWidget {
           FlatButton(onPressed: () {}, child: Text("Skip")),
         ],
       ),
-      body: Stack(
-        children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
-        ],
-      ),
+      body: body(),
+    );
+  }
+}
+
+class body extends StatelessWidget {
+  const body({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+        SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: 30,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xFF3F4768), width: 3),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                )
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }
