@@ -32,6 +32,8 @@ class WelcomeScreen extends StatelessWidget {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(12)))),
                 ),
+                Spacer(),
+                Container(),
                 Spacer()
               ],
             ),
