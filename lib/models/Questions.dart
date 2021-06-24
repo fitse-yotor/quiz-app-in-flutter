@@ -23,8 +23,8 @@ const List sample_data = [
   {
     "id": 3,
     "question": "A memory location that holds a single letter or number.",
-    "options": ['Double', 'char', 'Int', 'Word'],
-    "answer_index": 3,
+    "options": ['Double', 'Int', 'Char', 'Word'],
+    "answer_index": 2,
   },
   {
     "id": 4,
