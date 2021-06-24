@@ -55,7 +55,12 @@ class body extends StatelessWidget {
                               )),
                       Positioned.fill(
                           child: Row(
-                        children: [Text('18 Sec')],
+                        children: [
+                          Text('18 Sec'),
+                          SvgPicture.asset(
+                            "assets/icons/clock.svg",
+                          ),
+                        ],
                       ))
                     ],
                   ),
