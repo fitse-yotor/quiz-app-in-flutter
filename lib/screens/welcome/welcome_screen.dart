@@ -24,7 +24,10 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 Text("Enter your information Below"),
                 TextField(
-                  decoration: InputDecoration(hintText: "Full Name"),
+                  decoration: InputDecoration(
+                      hintText: "Full Name",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(12)))),
                 ),
                 Spacer()
               ],
