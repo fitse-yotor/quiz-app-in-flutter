@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:quiz_app/constants.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({Key key}) : super(key: key);
@@ -45,7 +47,16 @@ class body extends StatelessWidget {
                   child: Stack(
                     children: [
                       LayoutBuilder(
-                          builder: (context, constraint) => Container())
+                          builder: (context, Constraints) => Container(
+                                width: Constraints.maxWidth * 0.5,
+                                decoration: BoxDecoration(
+                                    gradient: kPrimaryGradient,
+                                    borderRadius: BorderRadius.circular(50)),
+                              )),
+                      Positioned.fill(
+                          child: Row(
+                        children: [Text('18 Sec')],
+                      ))
                     ],
                   ),
                 )
