@@ -48,19 +48,24 @@ class body extends StatelessWidget {
                     children: [
                       LayoutBuilder(
                           builder: (context, Constraints) => Container(
-                                width: Constraints.maxWidth * 0.5,
+                                width: Constraints.maxWidth * 0.8,
                                 decoration: BoxDecoration(
                                     gradient: kPrimaryGradient,
                                     borderRadius: BorderRadius.circular(50)),
                               )),
                       Positioned.fill(
-                          child: Row(
-                        children: [
-                          Text('18 Sec'),
-                          SvgPicture.asset(
-                            "assets/icons/clock.svg",
-                          ),
-                        ],
+                          child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: kDefaultPadding / 2),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text('18 Sec'),
+                            SvgPicture.asset(
+                              "assets/icons/clock.svg",
+                            ),
+                          ],
+                        ),
                       ))
                     ],
                   ),
