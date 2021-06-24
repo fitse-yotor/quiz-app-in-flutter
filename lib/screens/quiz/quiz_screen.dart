@@ -64,13 +64,14 @@ class _progress extends StatelessWidget {
       child: GetBuilder<QuestionController>(
           init: QuestionController(),
           builder: (controller) {
-            print(controller.animation.value);
+            // print(controller.animation.value);
 
             return Stack(
               children: [
                 LayoutBuilder(
                     builder: (context, Constraints) => Container(
-                          width: Constraints.maxWidth * 0.8,
+                          width:
+                              Constraints.maxWidth * controller.animation.value,
                           decoration: BoxDecoration(
                               gradient: kPrimaryGradient,
                               borderRadius: BorderRadius.circular(50)),
@@ -82,7 +83,7 @@ class _progress extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('18 Sec'),
+                      Text("${(controller.animation.value * 60.round())} Sec"),
                       SvgPicture.asset(
                         "assets/icons/clock.svg",
                       ),
