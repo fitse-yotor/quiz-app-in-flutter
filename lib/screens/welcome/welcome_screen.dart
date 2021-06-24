@@ -23,6 +23,9 @@ class WelcomeScreen extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Text("Enter your information Below"),
+                TextField(
+                  decoration: InputDecoration(hintText: "Full Name"),
+                ),
                 Spacer()
               ],
             ),
