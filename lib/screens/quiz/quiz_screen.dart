@@ -38,7 +38,31 @@ class body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
-              children: [_progress()],
+              children: [
+                _progress(),
+                SizedBox(height: kDefaultPadding),
+                Text.rich(
+                  TextSpan(
+                    text: "Question 1",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4
+                        .copyWith(color: kSecondaryColor),
+                    children: [
+                      TextSpan(
+                        text: "/10",
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline5
+                            .copyWith(color: kSecondaryColor),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  thickness: 1.5,
+                )
+              ],
             ),
           ),
         )
